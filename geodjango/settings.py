@@ -78,14 +78,18 @@ WSGI_APPLICATION = 'geodjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'webmapping',
         'USER': 'geodjango',
-        'PASSWORD': 'geo',
+        'PASSWORD': 'YaHoo444',
+        'HOST': 'webmapping.ceotd91zixit.eu-west-1.rds.amazonaws.com',
+        'PORT' : '5432'
     },
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
