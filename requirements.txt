@@ -1,5 +1,6 @@
 appdirs
 Django
+djangorestframework
 gunicorn
 packaging
 psycopg2
