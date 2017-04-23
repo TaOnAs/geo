@@ -1,8 +1,13 @@
-appdirs
 Django
+django
+markdown
+appdirs
+django-filter
 djangorestframework
-gunicorn
 packaging
 psycopg2
 pyparsing
 six
+wheel
+pip
+gunicorn
