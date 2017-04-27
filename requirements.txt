@@ -11,3 +11,4 @@ six
 wheel
 pip
 gunicorn
+django-cors-headers
