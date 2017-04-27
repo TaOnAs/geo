@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'django.contrib.gis.db',
     'rest_framework',
+    'rest_framework.authtoken',
     'gunicorn',
     'world',
 ]
