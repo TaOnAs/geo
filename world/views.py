@@ -33,8 +33,8 @@ class LuasPointView(generics.ListAPIView):
     def get_queryset(self):
         lat = self.request.GET.get('lat')
         lng = self.request.GET.get('lng')
-        pnt = Point(float(lng), float(lat))
-        return models.LuasStops.objects.get(point_intersects=pnt)
+        pnt = Point(float(lat), float(lng))
+        return models.LuasStops.objects.filter(point=pnt)
 
     model = models.LuasStops
     serializer_class = serializers.LuasSerializer
