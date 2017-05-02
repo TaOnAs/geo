@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^api-token-auth/', views.obtain_auth_token),
     url(r'^railways/$', myViews.RailwaysView.as_view(), name="railways-list"),
     url(r'^luas/$', myViews.LuasView.as_view(), name="luas-list"),
+    url(r'^luasStop/$', myViews.LuasPointView.as_view(), name="luas-Station")
 
 ]
 
