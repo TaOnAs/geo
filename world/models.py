@@ -72,6 +72,8 @@ class LuasStops(models.Model):
     # Regular Django fields corresponding to the attributes in the
     # Railways.geojson
     name = models.CharField(max_length=100)
+    line = models.CharField(max_length=100)
+    symbol = models.CharField(max_length=100)
     point = models.PointField(
         blank=True,
         null=True

@@ -13,5 +13,5 @@ class RailwaysSerializer(serializers.ModelSerializer):
 class LuasSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.LuasStops
-        fields = ('id', 'name', 'point')
+        fields = ('id', 'name', 'line', 'symbol', 'point')
 

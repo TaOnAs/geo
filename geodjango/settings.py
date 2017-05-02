@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'geodjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'webmapping',
+        'NAME': 'wmap',
         'USER': 'geodjango',
         'PASSWORD': 'YaHoo444',
-        'HOST': 'webmapping.ceotd91zixit.eu-west-1.rds.amazonaws.com',
+        'HOST': 'wmap.ceotd91zixit.eu-west-1.rds.amazonaws.com',
         'PORT' : '5432'
     },
 }

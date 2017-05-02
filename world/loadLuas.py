@@ -4,6 +4,8 @@ from .models import LuasStops
 
 luas_mapping = {
     'name': 'Name',
+    'line': 'Line',
+    'symbol': 'Symbol',
     'point': 'POINT',
 }
 
