@@ -15,6 +15,15 @@ class RailwaysView(generics.ListAPIView):
     # authentication_classes = (TokenAuthentication, BasicAuthentication)
     # permission_classes = (IsAuthenticated)
     def get_queryset(self):
+        stopName = self.request.GET.get('name')
+        return models.Railways.objects.filter(namn1=stopName)
+    model = models.Railways
+    serializer_class = serializers.RailwaysSerializer
+
+class RailwaysPointName(generics.ListAPIView):
+    # authentication_classes = (TokenAuthentication, BasicAuthentication)
+    # permission_classes = (IsAuthenticated)
+    def get_queryset(self):
         return models.Railways.objects
     model = models.Railways
     serializer_class = serializers.RailwaysSerializer
@@ -35,6 +44,15 @@ class LuasPointView(generics.ListAPIView):
         lng = self.request.GET.get('lng')
         pnt = Point(float(lat), float(lng))
         return models.LuasStops.objects.filter(point=pnt)
+
+    model = models.LuasStops
+    serializer_class = serializers.LuasSerializer
+
+class LuasPointName(generics.ListAPIView):
+
+    def get_queryset(self):
+        stopName = self.request.GET.get('name')
+        return models.LuasStops.objects.filter(name=stopName)
 
     model = models.LuasStops
     serializer_class = serializers.LuasSerializer

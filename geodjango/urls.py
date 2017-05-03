@@ -28,8 +28,10 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api-token-auth/', views.obtain_auth_token),
     url(r'^railways/$', myViews.RailwaysView.as_view(), name="railways-list"),
+    url(r'^railways/name$', myViews.RailwaysPointName.as_view(), name="railways-nname"),
     url(r'^luas/$', myViews.LuasView.as_view(), name="luas-list"),
-    url(r'^luasStop/$', myViews.LuasPointView.as_view(), name="luas-Station")
+    url(r'^luas/name/$', myViews.LuasPointName.as_view(), name="luas-name"),
+    url(r'^luasStop/$', myViews.LuasPointView.as_view(), name="luas-station")
 
 ]
 
