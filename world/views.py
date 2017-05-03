@@ -11,18 +11,14 @@ from rest_framework.permissions import IsAuthenticated
 
 
 
-class RailwaysView(generics.ListAPIView):
-    # authentication_classes = (TokenAuthentication, BasicAuthentication)
-    # permission_classes = (IsAuthenticated)
+class RailwaysPointName(generics.ListAPIView):
     def get_queryset(self):
         stopName = self.request.GET.get('name')
         return models.Railways.objects.filter(namn1=stopName)
     model = models.Railways
     serializer_class = serializers.RailwaysSerializer
 
-class RailwaysPointName(generics.ListAPIView):
-    # authentication_classes = (TokenAuthentication, BasicAuthentication)
-    # permission_classes = (IsAuthenticated)
+class RailwaysView(generics.ListAPIView):
     def get_queryset(self):
         return models.Railways.objects
     model = models.Railways
@@ -30,8 +26,6 @@ class RailwaysPointName(generics.ListAPIView):
 
 
 class LuasView(generics.ListAPIView):
-    # authentication_classes = (TokenAuthentication, BasicAuthentication)
-    # permission_classes = (IsAuthenticated)
     def get_queryset(self):
         return models.LuasStops.objects
     model = models.LuasStops
